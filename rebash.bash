@@ -1,11 +1,11 @@
 ORIGINAL_IFS=$IFS
 IFS=$(echo -en "\n\b")
  
-for script_file_type in "aliases" "functions"; do
+for script_file_type in "lib" "aliases" "functions"; do
     if [ ! -d ~/.rebash/${script_file_type} ]; then
-        continue;
+		continue;
     fi
-    
+
     for script_file in ~/.rebash/${script_file_type}/*.bash; do
 		source $script_file
     done
