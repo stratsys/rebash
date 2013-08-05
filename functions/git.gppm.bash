@@ -5,17 +5,17 @@ gppm () {
     else
         local branches current_branch previous_branch release_branches=('5.3/master' '5.4/master' '5.5/master' 'dev/master' 'vnext/master')
        
-		if [[ -z $1 ]]; then
-			__rebash_index_of release_branches[@] $(__rebash_git_current_branch)
-			branches=("${release_branches[@]:$?}")
+        if [[ -z $1 ]]; then
+            __rebash_index_of release_branches[@] $(__rebash_git_current_branch)
+            branches=("${release_branches[@]:$?}")
         
-			if [[ ${#branches[@]} -eq 0 ]]; then
-				echo "You're currently not on a release branch."
-				return
-			fi
-		else
-			branches=("$@")
-		fi  
+            if [[ ${#branches[@]} -eq 0 ]]; then
+                echo "You're currently not on a release branch."
+                return
+            fi
+        else
+            branches=("$@")
+        fi  
        
         previous_branch=${branches[0]}
         
