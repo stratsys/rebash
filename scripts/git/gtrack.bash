@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 show_usage () {
-    echo "Usage: gunp [<remote-name=origin>]"
-    echo "Shows unpushed commits."
+    echo "Usage: gtrack [<remote-name=origin>]"
+    echo "Tracks the current branch."
     echo ""
-    echo "  -h, --help              display this help text and exit"
+    echo "  -h, --help              displays this help text and exits"
     echo ""    
 }
 
@@ -18,4 +18,4 @@ case "$1" in
 esac
 
 current_branch=$(git symbolic-ref --short HEAD)
-git log --abbrev-commit --format=oneline "$remote/$current_branch..HEAD"
+git branch --set-upstream-to "$remote/$current_branch"

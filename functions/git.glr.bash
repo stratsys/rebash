@@ -1,7 +1,7 @@
 glr () {
     if [[ $1 = "help" ]]; then
         echo "Usage: glr <branch>"
-        echo "Show the commits that are in the current branch but not in the specified branch."
+        echo "Shows the commits that are in the current branch but not in the specified branch."
     else
         local branch=${1:-$(__rebash_git_relative_branch)}
         
