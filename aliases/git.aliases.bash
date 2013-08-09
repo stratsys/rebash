@@ -21,6 +21,8 @@ __git_complete glg _git_log
 __git_complete gll _git_log
 
 alias gp='git pull --ff-only'
+alias gpl='git pull --ff-only'
+alias gpo='git push origin'
 
 alias gs='git status --short --branch'
 alias gss='git status'

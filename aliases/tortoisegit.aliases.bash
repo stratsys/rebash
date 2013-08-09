@@ -1,0 +1,5 @@
+alias tgit='c:/Program/TortoiseGit/bin/TortoiseGitProc.exe'
+alias tgl='tgit /command:log &'
+alias tgc='tgit /command:commit &'
+alias tgr='tgit /command:resolve &'
+alias tgrb='tgit /command:rebase &'
