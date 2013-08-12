@@ -7,7 +7,7 @@ go () {
         if [[ -z $2 ]]; then
           git pull --rebase origin $1 && gpo $1
         else
-          rbpo $1 $2 && gpo $1          
+          rb $1 $2 && gpo $1
         fi               
     fi
 }
