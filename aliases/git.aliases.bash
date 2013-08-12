@@ -26,3 +26,10 @@ alias gpo='git push origin'
 
 alias gs='git status --short --branch'
 alias gss='git status'
+
+
+alias gco53='git checkout 5.3/master && gpl' 
+alias gco54='git checkout 5.4/master && gpl'
+alias gco55='git checkout 5.5/master && gpl'
+alias gcodev='git checkout dev/master && gpl'
+alias gcovn='git checkout vnext/master && gpl'
