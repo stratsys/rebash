@@ -8,7 +8,7 @@ Standing on the shoulders of giant. This project was based on and inspired by [o
 
 ## Install
 
-    > git clone https://github.com/mattias-rydengren-stratsys/rebash.git ~/.rebash
+    > git clone https://github.com/stratsys/rebash.git ~/.rebash
     > . ~/.rebash/tools/install.bash
     
 ## Uninstall
