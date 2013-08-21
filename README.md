@@ -10,6 +10,8 @@ Standing on the shoulders of giants. This project was based on and inspired by [
 
 Make sure you have the latest version of [Git for Windows](https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git).
 
+If you're using [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download) make sure you have the latest version as well.
+
     > git clone https://github.com/stratsys/rebash.git ~/.rebash
     > . ~/.rebash/tools/install.bash
     
