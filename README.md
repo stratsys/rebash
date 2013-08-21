@@ -8,6 +8,8 @@ Standing on the shoulders of giants. This project was based on and inspired by [
 
 ## Install
 
+Make sure you have the latest version of [Git for Windows](https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git).
+
     > git clone https://github.com/stratsys/rebash.git ~/.rebash
     > . ~/.rebash/tools/install.bash
     
