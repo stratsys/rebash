@@ -33,3 +33,12 @@ if [[ -e ~/.bash_profile_custom ]]; then
 fi
 
 IFS=$ORIGINAL_IFS
+
+# check for new version of rebash.
+pushd . > /dev/null
+rebash go
+count=$(git rev-list head...origin/master --count)
+if [[ $count -ne 0 ]]; then
+    echo -e "\033[00;32mA new version of 'rebash' is available. Use 'rebash update' to update.\033[0m";
+fi
+popd > /dev/null
