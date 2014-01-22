@@ -21,6 +21,10 @@ __git_complete gl _git_log
 __git_complete glg _git_log
 __git_complete gll _git_log
 
+alias gm='git merge --no-ff'
+
+__git_complete gm _git_merge
+
 alias gp='git pull --ff-only'
 alias gpr='git pull --rebase'
 alias gpl='git pull --ff-only'
