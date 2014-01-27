@@ -16,6 +16,7 @@ __git_complete gcob _git_checkout
 alias gl='git log --abbrev-commit --graph --format=oneline'
 alias glg='git log --abbrev-commit --format=oneline | grep'
 alias gll='git log'
+alias glt='git log --abbrev-commit --graph --format=oneline --since=5am'
 
 __git_complete gl _git_log
 __git_complete glg _git_log
