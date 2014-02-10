@@ -38,6 +38,7 @@ __git_complete gre _git_rebase
 alias gs='git status --short --branch'
 alias gss='git status'
 
+alias gclean='git clean -fx -d'
 
 alias gco53='git checkout 5.3/master && gpl' 
 alias gco54='git checkout 5.4/master && gpl'
