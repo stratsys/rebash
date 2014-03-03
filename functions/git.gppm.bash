@@ -4,7 +4,10 @@ gppm () {
         echo "Push, pull and merge several branches."
     else
         __rebash_echo_trace "Checking for new version of 'rebash'."
-        __update_rebash
+        if __update_rebash; then
+            gppm "$@"
+            return
+        fi
         
         local branches current_branch previous_branch release_branches=('5.3/master' '5.4/master' '5.5/master' '5.6/master' '5.7/master' 'dev/master' 'vnext/master')
        

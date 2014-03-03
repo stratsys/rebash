@@ -3,8 +3,12 @@ __update_rebash () {
     count=$(git rev-list head..origin/master --count)
     if [[ $count -ne 0 ]]; then
         rebash update
+        rebash return
+        return 0 # true is zero
+    else
+        rebash return
+        return 1 # false is one
     fi
-    rebash return
 }
 
 ORIGINAL_IFS=$IFS
