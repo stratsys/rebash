@@ -44,5 +44,3 @@ if [[ -e ~/.bash_profile_custom ]]; then
 fi
 
 IFS=$ORIGINAL_IFS
-
-__update_rebash
