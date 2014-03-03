@@ -1,7 +1,18 @@
+__update_rebash () {
+    rebash go
+    count=$(git rev-list head..origin/master --count)
+    if [[ $count -ne 0 ]]; then
+        rebash update
+    fi
+    rebash return
+}
+
 ORIGINAL_IFS=$IFS
 IFS=$(echo -en "\n\b")
  
 source ~/.rebash/rebash.command.bash
+
+__update_rebash
  
 for script_file_type in "config" "lib" "aliases" "functions"; do
     if [ ! -d ~/.rebash/${script_file_type} ]; then
@@ -34,10 +45,4 @@ fi
 
 IFS=$ORIGINAL_IFS
 
-# check for new version of rebash.
-rebash go
-count=$(git rev-list head...origin/master --count)
-if [[ $count -ne 0 ]]; then
-    echo -e "\033[00;32mA new version of 'rebash' is available. Use 'rebash update' to update.\033[0m";
-fi
-rebash return
+__update_rebash

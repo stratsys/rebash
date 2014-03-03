@@ -29,6 +29,7 @@ rebash_uninstall () {
 rebash_update () {
     rebash go
     git pull --ff-only origin master
+    echo -e "\033[00;32m'rebash' has been updated.\033[0m"
     reload
     rebash return
 }
