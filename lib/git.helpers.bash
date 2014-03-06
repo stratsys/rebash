@@ -4,5 +4,5 @@ __rebash_git_current_branch () {
 
 __rebash_git_relative_branch () {
     local branch=$(__rebash_git_current_branch)
-    echo ${branch/\/[0-9]*/\/master}
+    echo ${branch/\/*/\/master}
 }
