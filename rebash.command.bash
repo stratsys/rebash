@@ -15,7 +15,7 @@ rebash_go () {
 }
 
 rebash_return () {
-    pushd &> /dev/null
+    popd &> /dev/null
 }
 
 rebash_uninstall () {
