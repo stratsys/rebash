@@ -1,6 +1,6 @@
 __update_rebash () {
     rebash go
-    count=$(git rev-list head..origin/master --count)
+    count=$(git rev-list --count head..origin/master)
     if [[ $count -ne 0 ]]; then
         echo -e "\033[00;32mUpdating 'rebash'...\033[0m"        
         rebash update
