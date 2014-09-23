@@ -1,7 +1,23 @@
 gppm () {
+    local release_branches=(
+        '5.3/master' 
+        '5.4/master' 
+        '5.5/master' 
+        '5.6/master' 
+        '5.7/master' 
+        '5.8/master' 
+        '5.9/master' 
+        'dev/master' 
+        'vnext/master'
+    )
+
     if [[ $1 = "help" ]]; then
         echo "Usage: gppm [<branch> [<branch>]]"
         echo "Push, pull and merge several branches."
+    elif [[ $1 = "branches" ]]; then
+        for branch in "${release_branches[@]:0}"; do
+            echo $branch
+        done
     else
         __rebash_echo_trace "Checking for new version of 'rebash'."
         if __update_rebash; then
@@ -9,7 +25,7 @@ gppm () {
             return
         fi
         
-        local branches current_branch previous_branch release_branches=('5.3/master' '5.4/master' '5.5/master' '5.6/master' '5.7/master' '5.8/master' '5.9/master' 'dev/master' 'vnext/master')
+        local branches current_branch previous_branch
        
         if [[ -z $1 ]]; then
             __rebash_index_of release_branches[@] $(__rebash_git_current_branch)
