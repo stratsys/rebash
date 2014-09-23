@@ -1,23 +1,7 @@
-__update_rebash () {
-    rebash go
-    count=$(git rev-list --count head..origin/master)
-    if [[ $count -ne 0 ]]; then
-        echo -e "\033[00;32mUpdating 'rebash'...\033[0m"        
-        rebash update
-        rebash return
-        return 0 # true is zero
-    else
-        rebash return
-        return 1 # false is one
-    fi
-}
-
 ORIGINAL_IFS=$IFS
 IFS=$(echo -en "\n\b")
  
 source ~/.rebash/rebash.command.bash
-
-__update_rebash
  
 for script_file_type in "config" "lib" "aliases" "functions"; do
     if [ ! -d ~/.rebash/${script_file_type} ]; then

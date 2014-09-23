@@ -19,12 +19,6 @@ gppm () {
             echo $branch
         done
     else
-        __rebash_echo_trace "Checking for new version of 'rebash'."
-        if __update_rebash; then
-            gppm "$@"
-            return
-        fi
-        
         local branches current_branch previous_branch
        
         if [[ -z $1 ]]; then
