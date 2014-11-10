@@ -17,6 +17,8 @@ remote_iis () {
                 
                 echo -e "\033[00;32mAdding binding for $site in applicationhost.config.\033[0m"
                 "C:\Program Files (x86)\IIS Express\appcmd.exe" set site /site.name:$site "/+bindings.[protocol='http',bindinginformation='*:$port:$ip']"
+                
+                echo -e "You should restart IIS Express."
                 ;;
             remove)
                 echo -e "\033[00;32mRemoving URL reservation for '$ip:$port'.\033[0m"
