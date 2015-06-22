@@ -37,7 +37,7 @@ mgo() {
             git checkout $current_branch
             
             __rebash_echo_trace "Pulling '$current_branch'."
-            git pull --ff-only || return
+            git pull --rebase || return
             
             __rebash_echo_trace "Merging '$previous_branch' with '$current_branch'."
             git merge --no-ff -X renormalize $previous_branch || return
