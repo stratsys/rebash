@@ -30,6 +30,9 @@ mgo() {
        
         previous_branch=${branches[0]}
         
+		__rebash_echo_trace "Pull and rebase '$previous_branch'."
+		git pull --rebase || return
+		
         __rebash_echo_trace "Pushing '$previous_branch'."
         git push origin $previous_branch || return
         
