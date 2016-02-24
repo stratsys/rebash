@@ -18,4 +18,4 @@ case "$1" in
 esac
 
 current_branch=$(git symbolic-ref --short HEAD)
-git branch --set-upstream "$remote" "$current_branch"
+git push --set-upstream "$remote" "$current_branch"
