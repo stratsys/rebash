@@ -1,4 +1,4 @@
-alias tgit='c:/Program/TortoiseGit/bin/TortoiseGitProc.exe'
+alias tgit='"c:/Program Files/TortoiseGit/bin/TortoiseGitProc.exe"'
 alias tgl='tgit /command:log &'
 alias tgc='tgit /command:commit &'
 alias tgr='tgit /command:resolve &'
