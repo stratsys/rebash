@@ -44,7 +44,7 @@ mgo() {
             git pull --rebase || return
             
             __rebash_echo_trace "Merging '$previous_branch' with '$current_branch'."
-            git merge --no-ff -X renormalize $previous_branch || return
+			git merge --no-ff --no-edit -X renormalize $previous_branch || return
            
             __rebash_echo_trace "Pushing '$current_branch'."
             git push origin $current_branch || return
