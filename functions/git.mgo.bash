@@ -1,7 +1,6 @@
 mgo() {
     local release_branches=(
         'prod'
-        'translation'
         'test'
         'dev'
     )
