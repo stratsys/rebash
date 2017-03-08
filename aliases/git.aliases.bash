@@ -40,10 +40,10 @@ alias gss='git status'
 
 alias gclean='git clean -fx -d'
 
-alias gco62='git checkout 6.2/master && gpl'
 alias gco63='git checkout 6.3/master && gpl'
 alias gco64='git checkout 6.4/master && gpl'
 alias gco65='git checkout 6.5/master && gpl'
+alias gco66='git checkout 6.6/master && gpl'
 alias gcodevtest='git checkout dev/test && gpl'
 alias gcodev='git checkout dev/master && gpl'
 alias gcovn='git checkout vnext/master && gpl'
