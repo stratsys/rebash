@@ -8,7 +8,8 @@ gppm () {
         '6.6/master'        
         '6.7/master'
         'dev/test'
-				'dev/master'
+		'6.8/master'
+		'dev/master'
         'vnext/master'
     )
 
