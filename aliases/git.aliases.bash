@@ -40,8 +40,8 @@ alias gss='git status'
 
 alias gclean='git clean -fx -d'
 
-alias gco71='git checkout 7.1/master && gpl'
 alias gco72='git checkout 7.2/master && gpl'
+alias gco73='git checkout 7.3/master && gpl'
 alias gcodevtest='git checkout dev/test && gpl'
 alias gcodev='git checkout dev/master && gpl'
 alias gcovn='git checkout vnext/master && gpl'
