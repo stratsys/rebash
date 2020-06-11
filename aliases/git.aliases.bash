@@ -40,6 +40,9 @@ alias gss='git status'
 
 alias gclean='git clean -fx -d'
 
+alias gdevtotest='gcodev && gcodevtest && git merge --no-ff dev/master && git push && gogo'
+alias gtestto73='gcodevtest && gco73 && git merge --no-ff dev/test && git push && gogo'
+
 alias gco72='git checkout 7.2/master && gpl'
 alias gco73='git checkout 7.3/master && gpl'
 alias gcodevtest='git checkout dev/test && gpl'
