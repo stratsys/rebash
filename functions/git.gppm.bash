@@ -5,6 +5,7 @@ gppm () {
         'lts/master'
         '7.4/master'
         'dev/test'
+        '7.5/master'
         'dev/master'
         'vnext/master'
     )
