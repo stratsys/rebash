@@ -1,11 +1,10 @@
 gppm () {
     local release_branches=(
-        '7.2/master'
-        '7.3/master'
         '7.4/master'
         'lts/master'
         '7.5/master'
         'dev/test'
+        '7.6/master'
         'dev/master'
         'vnext/master'
     )

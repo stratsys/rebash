@@ -42,10 +42,11 @@ alias gclean='git clean -fx -d'
 
 alias gdevtotest='gcodev && gcodevtest && git merge --no-ff dev/master && git push && gogo'
 alias gtestto75='gcodevtest && gco75 && git merge --no-ff dev/test && git push && gogo'
+alias gtestto76='gcodevtest && gco76 && git merge --no-ff dev/test && git push && gogo'
 
-alias gco73='git checkout 7.3/master && gpl'
 alias gco74='git checkout 7.4/master && gpl'
 alias gco75='git checkout 7.5/master && gpl'
+alias gco76='git checkout 7.6/master && gpl'
 alias gcodevtest='git checkout dev/test && gpl'
 alias gcodev='git checkout dev/master && gpl'
 alias gcovn='git checkout vnext/master && gpl'
