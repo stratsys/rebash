@@ -6,7 +6,6 @@ gppm () {
         '7.6/master'
         'dev/test'
         'dev/master'
-        'vnext/master'
     )
 
     if [[ $1 = "help" ]]; then
