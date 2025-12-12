@@ -6,6 +6,7 @@ rebash_help () {
     echo "  return                  return to the previous directory, if any"
     echo "  uninstall               uninstall rebash"
     echo "  update                  update rebash"
+    echo "  reload                  reload rebash"
     echo ""
 }
 
@@ -34,6 +35,13 @@ rebash_update () {
     rebash return
 }
 
+rebash_reload () {
+    rebash go
+    reload
+    rebash return
+    echo -e "\033[00;32m'rebash' has been reloaded.\033[0m"
+}
+
 rebash () {
     case $1 in
         -h|--help|"help")
@@ -50,6 +58,9 @@ rebash () {
             ;;
         update)
             rebash_update 
+            ;;
+        reload)
+            rebash_reload 
             ;;
         *)
             rebash_help 
