@@ -11,7 +11,7 @@ gup () {
             __rebash_echo_trace "Fetching latest from origin '$release_branch'."
             git fetch origin $release_branch
             __rebash_echo_trace "Merging origin '$release_branch' into '$feature_branch'."
-            git merge $release_branch
+            git merge origin/$release_branch
         fi
     fi
 }
